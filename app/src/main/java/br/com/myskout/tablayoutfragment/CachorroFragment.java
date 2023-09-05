@@ -34,6 +34,14 @@ public class CachorroFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cachorro, container, false);
 
+        lstChorro = view.findViewById(R.id.lstChorro);
+
+        //Instanciando a classe adaptadora
+        CachorroFragment.AdapterChorro adapterChorro = new HomeFragment.AdapterGatos();
+
+
+        //Carregar a lista com o adaptador
+        lstChorro.setAdapter(adapterChorro);
 
         return view;
     }
